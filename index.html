@@ -22,5 +22,17 @@
 </head>
 <body>
 <iframe src="https://docs.google.com/document/d/e/2PACX-1vTzqJ3aotN-XpFDYB-wyVtfAFcxTcykX3ZOSma1kn1T3XgsFazazRUPXfwVM8tfbMYMcEjEecETwRez/pub?embedded=true"></iframe>
+<script>
+ // Function to detect a mobile device
+ function isMobileDevice() {
+  return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+ };
+
+ // If a mobile device is detected, adjust the iframe size
+ if (isMobileDevice()) {
+  document.getElementById('myIframe').style.width = "360px"; // Typical width of a mobile device
+  document.getElementById('myIframe').style.height = "640px"; // Typical height of a mobile device
+ }
+</script>
 </body>
 </html>
