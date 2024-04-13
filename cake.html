@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: black; /* Added this line */
+    }
+    .cake {
+      width: 200px;
+      height: 200px;
+      background: #ff9f85;
+      position: relative;
+      border-radius: 20px;
+      z-index: 2; /* Added this line */
+    }
+    .layer {
+      background: #fff;
+      position: absolute;
+      width: 80%;
+      height: 20px;
+      left: 10%;
+    }
+    .layer:nth-child(1) { bottom: 60px; }
+    .layer:nth-child(2) { bottom: 120px; }
+    .candle {
+      width: 10px;
+      height: 70px;
+      background: #ff4d4d;
+      position: absolute;
+      top: -70px;
+      left: 50%;
+      margin-left: -5px;
+    }
+    .flame {
+      width: 10px;
+      height: 20px;
+      background: #ffdb4d;
+      position: absolute;
+      top: -20px;
+      left: 0;
+      animation: flicker 1s infinite;
+    }
+    .plate {
+      width: 220px;
+      height: 20px;
+      background: #fff;
+      position: absolute;
+      bottom: 0;
+      border-radius: 20px;
+      margin-top: 0; /* Added this line */
+      z-index: 1; /* Added this line */
+    }
+    @keyframes flicker {
+      0% { opacity: 1; }
+      50% { opacity: 0.2; }
+      100% { opacity: 1; }
+    }
+  </style>
+  </head>
+  <body>
+    <div class="cake">
+      <div class="layer"></div>
+      <div class="layer"></div>
+      <div class="candle">
+        <div class="flame"></div>
+      </div>
+    </div>
+    <div class="plate" style="top: 514px; left: 659px;"></div>
+  </body>
+</html>
