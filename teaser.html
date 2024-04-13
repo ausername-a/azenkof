@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Embedded Video</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-size: cover;
+      background-position: center;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for better text readability */
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+      border-radius: 10px; /* Rounded corners for the container */
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Video</h1>
+  </header>
+  <div class="container">
+    <video controls>
+      <source src="teaser.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <script>
+    // Get a random number between 1 and 2
+    var randomNumber = Math.floor(Math.random() * 2) + 1;
+
+    // Set the background image based on the random number
+    if (randomNumber === 1) {
+      document.body.style.backgroundImage = "url('geoBackground.jpg')";
+    } else {
+      document.body.style.backgroundImage = "url('geoBackground.jpg')";
+    }
+  </script>
+</body>
+</html>
